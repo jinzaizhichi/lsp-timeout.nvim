@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
 	end
 })
 vim.api.nvim_create_autocmd({"FocusGained"}, {
-	desc = "Rerstart LSP server if window is focused",
+	desc = "Start LSP servers if window is focused",
 	group = "LspTimeout",
 	callback = function(options)
 		-- Clear lsp stop timer
@@ -60,7 +60,7 @@ vim.api.nvim_create_autocmd({"FocusGained"}, {
 })
 
 vim.api.nvim_create_autocmd({"FocusLost"}, {
-	desc = "Stop LSP server if window isn't focused",
+	desc = "Stop LSP servers if window isn't focused",
 	group = "LspTimeout",
 	callback = function(options)
 		-- Clear lsp start timer
