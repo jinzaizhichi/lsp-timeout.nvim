@@ -8,6 +8,7 @@ doc/tags: doc/$(PROJECT_NAME).txt
 	@$(NVIM) --headless -c "helptags doc/" -c "exit"
 
 # ts-vimdoc generate vimhelp from markdown 
+.SILENT:
 .ONESHELL:
 doc/$(PROJECT_NAME).txt: doc/index.md
 	@$(NVIM) --headless -E -c "
