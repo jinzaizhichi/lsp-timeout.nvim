@@ -64,11 +64,14 @@ vim.g["lsp-timeout-config"] = {
 
 ### TROUBLESHOOTING
 
-> **Note** IF SOME PLUGIN FAILED BECAUSE OF STOPPED LSP, PLEASE, FILL AN ISSUE IN THE RESPECTIVE PLUGIN REPO
+> **Note**
+> IF SOME PLUGIN FAILED BECAUSE OF STOPPED LSP, PLEASE, FILL AN ISSUE IN A RESPECTIVE PLUGIN REPO
 
 * Some LSP servers which don't keep cache on hdd may fail.
 * Some plugins that require active LSP servers like those used for signs may also fail:
 if they don't hook into |LspAttach| or |LspDetach| events or if they don't use `vim.lsp.get_clients(...)`. 
+* Run `LspInfo` to find active/stopped LSPs
+
 
 #### null-ls
 
